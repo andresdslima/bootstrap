@@ -1,7 +1,15 @@
-// NAO ESTAMOS USANDO PRA NADA
-const myModal = document.getElementById('myModal');
-const myInput = document.getElementById('myInput');
+const btnLogin = document.getElementById('btnLogin');
+const btnReset = document.getElementById('btnReset');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
 
-myModal.addEventListener('shown.bs.modal', () => {
-  myInput.focus();
-});
+btnLogin.onclick = event => {
+  event.preventDefault();
+
+  if (email.value.includes('@') && password.value) {
+    email.value = '';
+    password.value = '';
+
+    return toastr.success("You're logged in!");
+  };
+};

@@ -12,13 +12,14 @@ btnRegister.onclick = event => {
     price.value = '';
     quantity.value = '';
 
-    return toastr.success('Product registered!');
+    return toastr.success('New product registered!');
   };
 };
 
 btnDelete.forEach(button => {
   button.onclick = event => {
-    const buttonParent = event.target.parentNode;
+    const buttonIcon = event.target.parentNode;
+    const buttonParent = buttonIcon.parentNode;
     const buttonRow = buttonParent.parentNode;
     buttonRow.remove();
     toastr.error('Product deleted!');
