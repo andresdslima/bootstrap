@@ -1,9 +1,8 @@
-const btnLogin = document.getElementById('btnLogin');
-const btnReset = document.getElementById('btnReset');
+const buttonLogin = document.getElementById('btnLogin');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 
-btnLogin.onclick = event => {
+buttonLogin.onclick = event => {
   event.preventDefault();
 
   if (email.value.includes('@') && password.value) {
